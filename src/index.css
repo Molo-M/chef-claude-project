@@ -1,7 +1,33 @@
 @import "tailwindcss";
 
+@layer components {
+  .suggested-recipe-container h3 {
+    @apply text-xl font-semibold;
+  }
+
+  .container {
+    @apply grid grid-cols-4 gap-y-4 p-5;
+  }
+}
+
 @layer utilities {
   body {
     @apply font-[Inter];
+  }
+
+  ul {
+    @apply list-disc pl-5;
+  }
+
+  ol {
+    @apply list-decimal pl-5;
+  }
+
+  section {
+    @apply sm:w-180;
+  }
+
+  button {
+    @apply w-25 sm:w-50 h-20 border rounded-xl cursor-pointer;
   }
 }
