@@ -28,6 +28,6 @@
   }
 
   button {
-    @apply w-25 sm:w-50 h-20 border rounded-xl cursor-pointer;
+    @apply w-25 sm:w-50 border rounded-xl cursor-pointer;
   }
 }
