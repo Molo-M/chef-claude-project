@@ -8,6 +8,11 @@
   .container {
     @apply grid grid-cols-4 gap-y-4 p-5;
   }
+
+  .markdown_container {
+    @apply flex flex-col gap-3 px-3 py-3 text-lg;
+  }
+
 }
 
 @layer utilities {
