@@ -26,8 +26,8 @@ It uses Hugging Face's **Mistral AI model** to generate creative, markdown-forma
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/your-username/ai-recipe-generator.git
-cd ai-recipe-generator
+git clone https://github.com/Molo-M/chef-claude-project.git
+cd chef-claude-project
 ````
 
 2. **Install dependencies**
