@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import ClaudeRecipe from "./ClaudeRecipe"
 import IngredientsList from "./IngredientsList"
 import { getRecipeFromMistral } from "./ai.js"
@@ -6,6 +6,8 @@ import { getRecipeFromMistral } from "./ai.js"
 export default function Main() {
 
     const [ingredients, setIngredients] = useState([])
+    // Create ref for scrolling automatically to recipe section
+    const recipeSection = useRef(null)
 
     function addIngredient(formData) {
         // Get user input:
@@ -22,13 +24,18 @@ export default function Main() {
         setAIResponse(recipe) // update state with recipe text
     }
 
+    // Add effect to allow to scroll down automatically
+    useEffect(() => {
+        recipeSection.current !== null ? recipeSection.current.scrollIntoView({behavior: "smooth"}) : ""
+    }, [AI_response])
+
     return (
         <main className="flex flex-col sm:items-center">
             <form action={addIngredient} className="user_input flex gap-6 w-full justify-center py-10">
                 <input aria-label="Add Ingredient" className="border border-gray-900 bg-white py-2 px-4 rounded" type="text" name="ingredient" placeholder="eg. oregano" />
                 <button className="text-white border bg-black py-2 px-4 rounded" type="submit">+ Add Ingredient</button>
             </form>
-            {ingredients.length > 0 && <IngredientsList ingredients={ingredients} getRecipe={getRecipe} />}
+            {ingredients.length > 0 && <IngredientsList ref={recipeSection} ingredients={ingredients} getRecipe={getRecipe} />}
             {AI_response && <ClaudeRecipe AI_respone={AI_response} />}
         </main>
     )
