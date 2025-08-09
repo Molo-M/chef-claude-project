@@ -1,12 +1,12 @@
 
-# 🍳 AI Recipe Generator (Chef Claude)
+# AI Recipe Generator (Chef Claude)
 
 An interactive React application that suggests recipes based on a list of ingredients you provide.  
 It uses Hugging Face's **Mistral AI model** to generate creative, markdown-formatted recipes.
 
 ---
 
-## 📌 Features
+## Features
 - **Add Ingredients**: Input any ingredients you have on hand.
 - **AI Recipe Suggestion**: Uses Hugging Face Inference API to suggest recipes using some or all provided ingredients.
 - **Interactive UI**: React components update dynamically when new ingredients are added.
@@ -14,7 +14,7 @@ It uses Hugging Face's **Mistral AI model** to generate creative, markdown-forma
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠Technologies Used
 - **React** (Vite) for the front-end
 - **TailwindCSS** for styling
 - **Hugging Face Inference API** (`@huggingface/inference`) for AI-powered recipe generation
@@ -22,7 +22,7 @@ It uses Hugging Face's **Mistral AI model** to generate creative, markdown-forma
 
 ---
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 
 1. **Clone the repository**
 ```bash
@@ -53,7 +53,7 @@ npm run dev
 
 ---
 
-## 🚀 Usage
+## Usage
 
 1. Open the app in your browser.
 2. Enter an ingredient in the text box and click **+ Add Ingredient**.
@@ -63,7 +63,7 @@ npm run dev
 
 ---
 
-## 🧠 How It Works
+## How It Works
 
 * When you click **"Get a recipe"**, the app:
 
